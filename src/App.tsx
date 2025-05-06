@@ -8,6 +8,7 @@ import Destinations from './components/sections/Destinations';
 import Testimonials from './components/sections/Testimonials';
 import About from './components/sections/About';
 import BookingForm from './components/sections/BookingForm';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   useEffect(() => {
@@ -40,18 +41,19 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Toaster position="top-center" />
-      <Layout>
-        <Hero />
-        <Services />
-        <Stats />
-        <Destinations />
-        <About />
-        <Testimonials />
-        <BookingForm />
-      </Layout>
-    </>
+		<>
+			<Toaster position="top-center" />
+			<Layout>
+				<Hero />
+				<Services />
+				<Stats />
+				<Destinations />
+				<About />
+				<Testimonials />
+				<BookingForm />
+			</Layout>
+			<Analytics />
+		</>
   );
 }
 
